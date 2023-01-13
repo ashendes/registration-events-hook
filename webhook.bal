@@ -5,9 +5,9 @@ import ballerinax/googleapis.gmail;
 
 configurable asgardeo:ListenerConfig config = ?;
 
-configurable string googleClientId = "732184870155-gk8fmodkvhemknm9jfu3b5htss25koli.apps.googleusercontent.com";
-configurable string googleClientSecret = "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";
-configurable string googleRefreshToken = "1//0gXNii7rE0aT_CgYIARAAGBASNwF-L9IrUPKdGFqSj0Xe7_EMjQblAEu9H3xM0U_iFuwNPc7BrO81xZ_qlY4FtYxykyZ4ygieoms";
+configurable string googleClientId = ?;
+configurable string googleClientSecret = ?;
+configurable string googleRefreshToken = ?;
 
 listener http:Listener httpListener = new(8090);
 listener asgardeo:Listener webhookListener =  new(config,httpListener);
