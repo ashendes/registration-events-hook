@@ -1,0 +1,9 @@
+[build-options]
+  observabilityIncluded = true
+
+[package]
+  distribution = "2201.2.3"
+  name = "asgardeo_registrations_webhook"
+  org = "authme"
+  version = "0.1.0"
+
