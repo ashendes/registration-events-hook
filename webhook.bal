@@ -19,20 +19,20 @@ service asgardeo:RegistrationService on webhookListener {
   
     remote function onAddUser(asgardeo:AddUserEvent event ) returns error? {
       log:printInfo(event.toJsonString());
-      error? err = sendMail(receiverName);
-      if (err is error) {
-          log:printInfo(err.message());
-      }
+      //error? err = sendMail(receiverName);
+      //if (err is error) {
+      //    log:printInfo(err.message());
+      //}
      return;
     }
     
     remote function onConfirmSelfSignup(asgardeo:GenericEvent event ) returns error? {
         
         log:printInfo(event.toJsonString());
-        error? err = sendMail(receiverEmail);
-        if (err is error) {
-            log:printInfo(err.message());
-        }
+        //error? err = sendMail(receiverEmail);
+        //if (err is error) {
+        //   log:printInfo(err.message());
+        //}
         return;
     }
     
